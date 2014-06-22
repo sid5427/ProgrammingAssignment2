@@ -1,6 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
+##The two functions create a special object, stores a matrix value and returns its corresponding inverse matrix.
+
 ## makeCacheMatrix caches the value of the inverse matrix.
 ## The steps are - 
 ## 1. set the value of the matrix
@@ -48,16 +50,3 @@ cacheSolve <- function(x, ...) {
   m
 }
 
-a<-makeCacheMatrix(matrix(1:4,2))
-a$get()
-
-a$getInverse()
-
-a$set(matrix(5:8,2))
-a$get()
-cacheSolve(a)
-cacheSolve(a)
-
-a$getInverse()
-b = a$getInverse()
-a$get() %*%b
